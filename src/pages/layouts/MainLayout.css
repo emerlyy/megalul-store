@@ -1,0 +1,13 @@
+.main-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    flex-shrink: 0;
+  }
+}
+
+.content {
+  flex-grow: 1;
+}

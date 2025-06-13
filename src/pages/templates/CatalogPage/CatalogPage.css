@@ -1,0 +1,20 @@
+.catalog {
+  padding-block: 60px 40px;
+  height: 100%;
+}
+
+.catalog__body{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.catalog__list {
+  margin-bottom: 40px;
+}

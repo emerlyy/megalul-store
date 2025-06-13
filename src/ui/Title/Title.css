@@ -1,0 +1,16 @@
+.title {
+  text-align: start;
+  line-height: normal;
+}
+
+.title_xl {
+  font-size: var(--font-size-title-xl);
+}
+
+.title_large {
+  font-size: var(--font-size-title-large);
+}
+
+.title_small {
+  font-size: var(--font-size-title-small);
+}
