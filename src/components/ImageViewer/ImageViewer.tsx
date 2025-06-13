@@ -17,8 +17,8 @@ const ImageViewer = ({ images }: Props) => {
         <img
           src={current}
           alt=""
-          width={400}
-          height={400}
+          width={360}
+          height={360}
           className="image-viewer__image"
         />
       </div>
@@ -34,8 +34,8 @@ const ImageViewer = ({ images }: Props) => {
                 onClick={setImage(img)}
               >
                 <img
-                  width={54}
-                  height={54}
+                  width={44}
+                  height={44}
                   src={img}
                   alt=""
                   className="image-viewer__image"
