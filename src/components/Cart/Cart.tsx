@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { PiShoppingCart } from "react-icons/pi";
 import { Link } from "react-router";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
@@ -25,6 +25,14 @@ const Cart = () => {
 
   const ref = useRef<HTMLDivElement>(null);
   useOutsideClick(ref, closeCart, isCartOpen);
+
+  useEffect(() => {
+    if (isCartOpen) {
+      document.body.classList.add("noscroll");
+    } else {
+      document.body.classList.remove("noscroll");
+    }
+  }, [isCartOpen]);
 
   return (
     <div className="cart-wrapper">
