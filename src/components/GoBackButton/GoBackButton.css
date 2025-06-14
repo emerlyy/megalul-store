@@ -1,0 +1,9 @@
+.go-back {
+  display: inline-flex;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

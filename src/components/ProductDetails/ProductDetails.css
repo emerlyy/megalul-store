@@ -1,8 +1,16 @@
-.product-details {
+.product-details__wrapper {
   max-width: 1110px;
   margin: 0 auto;
+  padding: 60px 16px 80px 16px;
+}
+
+.product-details__back {
+  margin-bottom: 40px;
+}
+
+.product-details {
   display: grid;
-  padding: 4rem 1rem 4rem 1rem;
+
   column-gap: 2.5rem;
   row-gap: 1.25rem;
   grid-template-columns: 1fr 1fr;
@@ -42,7 +50,7 @@
   margin-bottom: 32px;
 }
 
-.product-details__actions{
+.product-details__actions {
   display: flex;
   gap: 16px;
 }
