@@ -146,9 +146,9 @@ const CheckoutForm = () => {
     formState: { errors },
   } = useForm<FormInputs>();
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {};
+  const onSubmit: SubmitHandler<FormInputs> = () => {};
 
-  const { totalQuantity, clearCart } = useCart();
+  const { totalQuantity } = useCart();
 
   return (
     <>
@@ -189,15 +189,10 @@ const CheckoutForm = () => {
 
 type CheckoutFormBlockProps = {
   title: string;
-  className?: string;
   children?: React.ReactNode;
 };
 
-const CheckoutFormBlock = ({
-  title,
-  className,
-  children,
-}: CheckoutFormBlockProps) => {
+const CheckoutFormBlock = ({ title, children }: CheckoutFormBlockProps) => {
   return (
     <>
       <Title

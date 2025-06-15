@@ -3,11 +3,7 @@ import { BiSearch } from "react-icons/bi";
 import { useNavigate, useSearchParams } from "react-router";
 import Input from "../../ui/Input/Input";
 
-type Props = {
-  className?: string;
-};
-
-const Search = ({ className }: Props) => {
+const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get("query") || ""
