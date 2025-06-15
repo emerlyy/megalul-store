@@ -1,8 +1,7 @@
-import clsx from "clsx";
 import { useState, type FormEvent } from "react";
 import { BiSearch } from "react-icons/bi";
 import { useNavigate, useSearchParams } from "react-router";
-import "./Search.css";
+import Input from "../../ui/Input/Input";
 
 type Props = {
   className?: string;
@@ -23,18 +22,19 @@ const Search = ({ className }: Props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label className={clsx("input search", className)}>
-        <div className="input__icon">{<BiSearch width={20} height={20}/>}</div>
-        <input
-          type="text"
-          className="input__field"
-          placeholder="Search by name..."
-          name="search"
-          autoComplete="off"
-          value={searchQuery}
-          onChange={(event) => setSearchQuery(event.target.value)}
-        />
-      </label>
+      <Input
+        id="search"
+        type="text"
+        className="input__field"
+        placeholder="Search by name..."
+        name="search"
+        autoComplete="off"
+        textColor="text-secondary"
+        fieldSize="small"
+        icon={<BiSearch />}
+        value={searchQuery}
+        onChange={(event) => setSearchQuery(event.target.value)}
+      />
     </form>
   );
 };

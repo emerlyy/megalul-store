@@ -1,0 +1,22 @@
+.checkout {
+  padding-block: 60px 140px;
+}
+
+.checkout__goback {
+  margin-bottom: 24px;
+
+  @media (min-width: 992px) {
+    margin-bottom: 38px;
+  }
+}
+
+.checkout__content {
+  display: grid;
+  grid-template-columns: min(66%, 730px) 1fr;
+  gap: 30px;
+
+  @media (max-width: 992px) {
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+}

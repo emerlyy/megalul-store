@@ -1,12 +1,19 @@
-import Title from "../../ui/Title/Title";
+import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
+import GoBackButton from "../../components/GoBackButton/GoBackButton";
+import Summary from "../../components/Summary/Summary";
+import "./CheckoutPage.css";
 
 const CheckoutPage = () => {
   return (
-    <div className="container">
-      <Title tag="h1" size="xl">
-        Checkout
-      </Title>
-    </div>
+    <section className="checkout">
+      <div className="container">
+        <GoBackButton className="checkout__goback" />
+        <div className="checkout__content">
+          <CheckoutForm />
+          <Summary />
+        </div>
+      </div>
+    </section>
   );
 };
 

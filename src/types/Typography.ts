@@ -3,6 +3,7 @@ export type TextColor =
   | "text-secondary"
   | "light"
   | "primary"
-  | "inherit";
+  | "inherit"
+  | "error";
 
 export type TextWeight = "regular" | "medium" | "semibold" | "bold";

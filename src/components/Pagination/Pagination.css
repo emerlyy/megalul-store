@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   background: none;
-  border: 1px solid var(--color-stroke);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   height: 28px;
   width: 28px;

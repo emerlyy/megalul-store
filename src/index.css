@@ -26,10 +26,11 @@ a {
 :root {
   --color-background: #fafafa;
   --color-card-background: #f5f5f5;
-  --color-stroke: #e3e3e3;
+  --color-border: #e3e3e3;
 
   --color-primary: #087e8b;
   --color-primary-hover: #0a8f9d;
+  --color-error: #cd2c2c;
 
   --color-price: #087e8b;
 
@@ -39,6 +40,8 @@ a {
   --color-text-primary: #212121;
   --color-text-secondary: #eaeaea;
   --color-text-light: #777777;
+
+  --color-input-placeholder: var(--color-text-light);
 
   --font-size-title-xl: 40px;
   --font-size-title-large: 32px;
@@ -108,6 +111,10 @@ body {
 
 .color_primary {
   color: var(--color-primary);
+}
+
+.color_error {
+  color: var(--color-error);
 }
 
 .color_inherit {

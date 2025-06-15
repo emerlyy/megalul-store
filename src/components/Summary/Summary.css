@@ -1,0 +1,118 @@
+.summary {
+  padding: 32px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+}
+
+.summary__title {
+  letter-spacing: 1.2px;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.summary__totals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.summary__price {
+  text-align: right;
+}
+
+.summary__grand-total {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.summary__message-empty {
+  padding-block: 32px;
+  text-align: center;
+}
+
+.summary-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.summary-item__image-wrapper {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-card-background);
+  border-radius: 8px;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.summary-item__image {
+  display: block;
+  max-width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.summary-item__content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 8px;
+}
+
+.summary-item__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.summary-item__price {
+  font-size: 14px;
+}
+
+.summary-item__quantity {
+}
+
+.summary__checkout {
+  width: 100%;
+  color: var(--color-white);
+  background: var(--color-primary);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border: none;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  &:disabled {
+    color: var(--color-text-secondary);
+    pointer-events: none;
+    background-color: var(--color-card-background);
+  }
+}

@@ -1,0 +1,30 @@
+.checkout-form {
+  padding: 54px 48px 48px 48px;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+}
+
+.checkout-form__title {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.checkout-form__fullwidth {
+  grid-column: 1/-1;
+}
+
+.checkout-form-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+  margin-bottom: 58px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+
+.checkout-form__block-title {
+	margin-bottom: 16px;
+}
