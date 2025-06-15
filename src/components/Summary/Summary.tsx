@@ -19,7 +19,7 @@ const Summary = () => {
       <div className="summary-list">
         {totalQuantity > 0 ? (
           items.map((item) => (
-            <div className="summary-item">
+            <div key={item.id} className="summary-item">
               <div className="summary-item__image-wrapper">
                 <img
                   className="summary-item__image"
