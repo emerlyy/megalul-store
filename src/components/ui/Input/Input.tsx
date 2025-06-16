@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { forwardRef, type InputHTMLAttributes, type ReactNode } from "react";
-import type { TextColor } from "../../types";
+import type { TextColor } from "../../../types";
 import Text from "../Text/Text";
 import "./Input.css";
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router";
-import Cart from "../../components/Cart/Cart";
-import CategoriesSelector from "../../components/CategoriesSelector/CategoriesSelector";
-import Search from "../../components/Search/Search";
+import Cart from "../../Cart/Cart";
+import CategoriesSelector from "../../CategoriesSelector/CategoriesSelector";
+import Search from "../../Search/Search";
 import Logo from "../Logo/Logo";
 import "./Header.css";
 
@@ -10,7 +10,7 @@ const Header = () => {
     <header className="header">
       <div className="container header__inner">
         <div className="header__left">
-          <Link to="/" >
+          <Link to="/">
             <Logo />
           </Link>
           <CategoriesSelector />

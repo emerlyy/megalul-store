@@ -2,13 +2,13 @@ import { useAppDispatch } from "../../hooks/reduxHooks";
 import { useCounter } from "../../hooks/useCounter";
 import { addItemToCart } from "../../store/cart/cartSlice";
 import type { Product } from "../../types";
-import Text from "../../ui/Text/Text";
-import Title from "../../ui/Title/Title";
 import { formatKebabCase } from "../../utils/formatKebabCase";
 import { formatPrice } from "../../utils/formatPrice";
 import Counter from "../Counter/Counter";
 import GoBackButton from "../GoBackButton/GoBackButton";
 import ImageViewer from "../ImageViewer/ImageViewer";
+import Text from "../ui/Text/Text";
+import Title from "../ui/Title/Title";
 import "./ProductDetails.css";
 
 type Props = {

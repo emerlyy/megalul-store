@@ -1,11 +1,11 @@
 import { IoStar } from "react-icons/io5";
 import { Link } from "react-router";
 import type { Product } from "../../types";
-import Text from "../../ui/Text/Text";
 import { formatKebabCase } from "../../utils/formatKebabCase";
 import { formatPrice } from "../../utils/formatPrice";
+import Text from "../ui/Text/Text";
+import Title from "../ui/Title/Title";
 import "./ProductCard.css";
-import Title from "../../ui/Title/Title";
 
 type Props = Pick<
   Product,

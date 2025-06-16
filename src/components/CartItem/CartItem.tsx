@@ -1,9 +1,8 @@
 import clsx from "clsx";
-import Text from "../../ui/Text/Text";
+import { BiX } from "react-icons/bi";
 import { formatPrice } from "../../utils/formatPrice";
 import Counter from "../Counter/Counter";
-
-import { BiX } from "react-icons/bi";
+import Text from "../ui/Text/Text";
 import "./CartItem.css";
 
 type Props = {

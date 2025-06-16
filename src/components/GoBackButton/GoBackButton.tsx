@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import type { MouseEvent } from "react";
 import { Link, useNavigate } from "react-router";
-import Text from "../../ui/Text/Text";
+import Text from "../ui/Text/Text";
 import "./GoBackButton.css";
 
 type GoBackLinkProps = {

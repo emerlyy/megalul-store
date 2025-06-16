@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { BiSearch } from "react-icons/bi";
 import { useNavigate, useSearchParams } from "react-router";
-import Input from "../../ui/Input/Input";
+import Input from "../ui/Input/Input";
 
 const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();

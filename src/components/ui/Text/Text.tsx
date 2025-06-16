@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { HTMLElementType, ReactNode } from "react";
-import type { TextColor, TextWeight } from "../../types";
+import type { TextColor, TextWeight } from "../../../types";
 import "./Text.css";
 
 type TextSize = "xl" | "large" | "regular" | "small";

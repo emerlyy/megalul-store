@@ -4,10 +4,10 @@ import { Link } from "react-router";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { useToggle } from "../../hooks/useToggle";
 import { useCart } from "../../store/cart/useCart";
-import Text from "../../ui/Text/Text";
-import Title from "../../ui/Title/Title";
 import { formatPrice } from "../../utils/formatPrice";
 import CartItem from "../CartItem/CartItem";
+import Text from "../ui/Text/Text";
+import Title from "../ui/Title/Title";
 import "./Cart.css";
 
 const Cart = () => {

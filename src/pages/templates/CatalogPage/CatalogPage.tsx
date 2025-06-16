@@ -1,7 +1,7 @@
 import Pagination from "../../../components/Pagination/Pagination";
 import ProductsList from "../../../components/ProductsList/ProductsList";
+import Title from "../../../components/ui/Title/Title";
 import type { Product } from "../../../types";
-import Title from "../../../ui/Title/Title";
 import "./CatalogPage.css";
 
 type Props = {

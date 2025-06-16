@@ -6,8 +6,8 @@ import { Link, useParams } from "react-router";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { useToggle } from "../../hooks/useToggle";
 import { useCategories } from "../../store/categories/useCategories";
-import Text from "../../ui/Text/Text";
 import "./CategoriesSelector.css";
+import Text from "../ui/Text/Text";
 
 type Params = {
   category: string;

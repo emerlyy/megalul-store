@@ -1,7 +1,8 @@
 import { useCart } from "../../store/cart/useCart";
-import Text from "../../ui/Text/Text";
-import Title from "../../ui/Title/Title";
+
 import { formatPrice } from "../../utils/formatPrice";
+import Text from "../ui/Text/Text";
+import Title from "../ui/Title/Title";
 import "./Summary.css";
 
 const SHIPPING_COST = 50;

@@ -4,9 +4,10 @@ import {
   type SubmitHandler,
 } from "react-hook-form";
 import { useCart } from "../../store/cart/useCart";
-import Input from "../../ui/Input/Input";
-import Title from "../../ui/Title/Title";
+
 import "./CheckoutForm.css";
+import Title from "../ui/Title/Title";
+import Input from "../ui/Input/Input";
 
 interface FormInputs {
   name: string;
