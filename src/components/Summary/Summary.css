@@ -84,9 +84,6 @@
   font-size: 14px;
 }
 
-.summary-item__quantity {
-}
-
 .summary__checkout {
   width: 100%;
   color: var(--color-white);
