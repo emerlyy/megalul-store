@@ -1,5 +1,4 @@
-
-import { describe, expect, it, test } from "vitest";
+import { describe, expect, it } from "vitest";
 import { formatKebabCase } from "../formatKebabCase";
 
 describe("formatKebabCase", () => {
@@ -29,4 +28,3 @@ describe("formatKebabCase", () => {
     expect(formatKebabCase("section-1-title")).toBe("Section 1 Title");
   });
 });
-

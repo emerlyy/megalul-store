@@ -12,11 +12,7 @@ const ProductsList = ({ products, className }: Props) => {
   return (
     <div className={clsx("products-list", className)}>
       {products.map((item) => (
-        <ProductCard
-          key={item.id}
-          {...item}
-          reviewCount={item.reviews.length}
-        />
+        <ProductCard key={item.id} {...item} />
       ))}
     </div>
   );

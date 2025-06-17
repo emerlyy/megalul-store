@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import { createRoutesStub, type InitialEntry } from "react-router";
 import CategoryPage from "../../pages/CategoryPage/CategoryPage";
 import CheckoutPage from "../../pages/CheckoutPage/CheckoutPage";
