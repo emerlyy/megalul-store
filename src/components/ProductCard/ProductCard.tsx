@@ -7,18 +7,10 @@ import Text from "../ui/Text/Text";
 import Title from "../ui/Title/Title";
 import "./ProductCard.css";
 
-type Props = Pick<
+export type ProductCardProps = Pick<
   Product,
-  | "id"
-  | "title"
-  | "price"
-  | "discountPercentage"
-  | "rating"
-  | "thumbnail"
-  | "category"
-> & {
-  reviewCount: number;
-};
+  "id" | "title" | "price" | "rating" | "thumbnail" | "category"
+>;
 
 const ProductCard = ({
   id,
@@ -27,7 +19,7 @@ const ProductCard = ({
   rating,
   thumbnail,
   category,
-}: Props) => {
+}: ProductCardProps) => {
   return (
     <Link className="product-card" to={`/product/${id}`}>
       <div className="product-card__image">
