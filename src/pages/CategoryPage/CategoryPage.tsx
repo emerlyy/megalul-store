@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
+import { selectCategories } from "../../store/categories/categoriesSlice";
 import {
   loadProductsByCategory,
   selectProducts,
@@ -17,15 +18,20 @@ const CategoryPage = () => {
 
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    if (category) dispatch(loadProductsByCategory({ page: 1, category }));
-  }, [dispatch,category]);
-
+  const { items: loadedCategories } = useAppSelector(selectCategories);
   const { items, page, totalPages } = useAppSelector(selectProducts);
 
   const handleChange = (page: number) => {
     if (category) dispatch(loadProductsByCategory({ category, page }));
   };
+
+  useEffect(() => {
+    if (category) dispatch(loadProductsByCategory({ page: 1, category }));
+  }, [dispatch, category]);
+
+  if (!loadedCategories.some((item) => item.slug === category)) {
+    throw new Response("Not Found", { status: 404 });
+  }
 
   return (
     <CatalogPage
