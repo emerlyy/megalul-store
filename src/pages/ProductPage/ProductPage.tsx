@@ -60,7 +60,7 @@ const ProductPage = () => {
 
   return (
     <div className="product-page container">
-      <ProductDetails product={response.product} />
+      <ProductDetails {...response.product} />
     </div>
   );
 };
