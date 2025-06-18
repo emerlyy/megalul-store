@@ -1,30 +1,9 @@
 // ProductsList.test.tsx
-import { screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import type { RootState } from "../../store";
-import { renderWithRedux } from "../../tests/helpers/renderWithRedux";
 import { renderWithRouter } from "../../tests/helpers/renderWithRouter";
 import type { ProductCardProps } from "../ProductCard/ProductCard";
 import ProductsList from "./ProductsList";
-
-const initialState: RootState = {
-  cart: {
-    items: [],
-    totalQuantity: 0,
-  },
-  categories: {
-    status: "idle",
-    items: [],
-    error: null,
-  },
-  products: {
-    error: null,
-    items: [],
-    page: 1,
-    status: "idle",
-    totalPages: 1,
-  },
-};
 
 const mockProducts: ProductCardProps[] = [
   {
@@ -55,21 +34,17 @@ const mockProducts: ProductCardProps[] = [
 
 describe("ProductsList", () => {
   it("Renders a list of ProductCard components", () => {
-    renderWithRedux(
-      renderWithRouter(<ProductsList products={mockProducts} />),
-      initialState
-    );
+    render(renderWithRouter(<ProductsList products={mockProducts} />));
     expect(screen.getByText("Product 1")).toBeInTheDocument();
     expect(screen.getByText("Product 2")).toBeInTheDocument();
     expect(screen.getByText("Product 3")).toBeInTheDocument();
   });
 
   it("Applies additional className if provided", () => {
-    renderWithRedux(
+    render(
       renderWithRouter(
         <ProductsList className="custom-class" products={mockProducts} />
-      ),
-      initialState
+      )
     );
     const container = screen.getByTestId("products-list");
     expect(container).toHaveClass("products-list");

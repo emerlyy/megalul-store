@@ -11,11 +11,20 @@ import Text from "../ui/Text/Text";
 import Title from "../ui/Title/Title";
 import "./ProductDetails.css";
 
-type Props = {
-  product: Product;
-};
+type Props = Pick<
+  Product,
+  "id" | "thumbnail" | "price" | "title" | "images" | "description" | "category"
+>;
 
-const ProductDetails = ({ product }: Props) => {
+const ProductDetails = ({
+  id,
+  price,
+  thumbnail,
+  title,
+  images,
+  description,
+  category,
+}: Props) => {
   const [count, increment, decrement] = useCounter();
 
   const dispatch = useAppDispatch();
@@ -23,11 +32,11 @@ const ProductDetails = ({ product }: Props) => {
   const handleAddToCard = () => {
     dispatch(
       addItemToCart({
-        id: product.id,
-        image: product.thumbnail,
-        price: product.price,
+        id: id,
+        image: thumbnail,
+        price: price,
         quantity: count,
-        name: product.title,
+        name: title,
       })
     );
   };
@@ -37,7 +46,7 @@ const ProductDetails = ({ product }: Props) => {
       <GoBackButton className="product-details__back" />
       <div className="product-details">
         <div className="product-details__images">
-          <ImageViewer images={product.images} />
+          <ImageViewer images={images} />
         </div>
         <div className="product-details__content">
           <Text
@@ -46,7 +55,7 @@ const ProductDetails = ({ product }: Props) => {
             weight="semibold"
             className="product-details__category"
           >
-            {formatKebabCase(product.category)}
+            {formatKebabCase(category)}
           </Text>
           <Title
             tag="h2"
@@ -55,7 +64,7 @@ const ProductDetails = ({ product }: Props) => {
             color="primary"
             className="product-details__title"
           >
-            {product.title}
+            {title}
           </Title>
           <Text
             tag="p"
@@ -63,7 +72,7 @@ const ProductDetails = ({ product }: Props) => {
             color="light"
             className="product-details__description"
           >
-            {product.description}
+            {description}
           </Text>
           <Text
             size="xl"
@@ -71,7 +80,7 @@ const ProductDetails = ({ product }: Props) => {
             weight="bold"
             className="product-details__price"
           >
-            ${formatPrice(product.price)}
+            ${formatPrice(price)}
           </Text>
           <div className="product-details__actions">
             <Counter

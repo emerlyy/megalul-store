@@ -24,27 +24,37 @@ const initialState: RootState = {
   },
 };
 
-describe("HomePage", () => {
+describe("CheckoutPage", () => {
   it("Renders header", async () => {
     await act(() => {
-      renderWithRedux(renderRouter(["/"]), initialState);
+      renderWithRedux(renderRouter(["/checkout"]), initialState);
     });
 
     const categoryButton = screen.getByText(/Categories/i);
     expect(categoryButton).toBeInTheDocument();
   });
 
-  it("Renders title", async () => {
+  it("Renders checkout form", async () => {
     await act(() => {
-      renderWithRedux(renderRouter(["/"]), initialState);
+      renderWithRedux(renderRouter(["/checkout"]), initialState);
     });
-    const homePageTitle = screen.getByText(/All Products/i);
+    const homePageTitle = screen.getByText(/CHECKOUT/i);
     expect(homePageTitle).toBeInTheDocument();
+  });
+
+  it("Renders summary", async () => {
+    await act(() => {
+      renderWithRedux(renderRouter(["/checkout"]), initialState);
+    });
+    const homePageTitle = screen.getByText(/SUMMARY/i);
+    expect(homePageTitle).toBeInTheDocument();
+    const checkoutButton = screen.getByText(/pay/i);
+    expect(checkoutButton).toBeInTheDocument();
   });
 
   it("Renders footer", async () => {
     await act(() => {
-      renderWithRedux(renderRouter(["/"]), initialState);
+      renderWithRedux(renderRouter(["/checkout"]), initialState);
     });
     const footerEmail = screen.getByText(/shopping@megalul.com/i);
     expect(footerEmail).toBeInTheDocument();
